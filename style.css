@@ -6,6 +6,7 @@
 
 :root {
 	--primary-color: rgba(0, 0, 24, 1);
+	--secondary-color: rgba(0, 0, 24, 0.97);
 }
 
 body {
@@ -13,8 +14,27 @@ body {
 	width: 50%;
 	display: flex;
 	font: normal 13pt "Helvetica";
+	background-color: var(--secondary-color);
+}
+
+span.required-symbol::before {
+	content: "*";
+	color: red;
 }
 
 div.container {
-	
+	margin-top: 200px;
+	border-radius: 20px;
+	border: 2px solid rgba(0, 255, 255, 1);
+	background: linear-gradient(0deg, #000018, #000036);
+	background-color: var(--primary-color);
+	box-shadow: 0 0 100px -20px rgba(240, 255, 255, 1);
+}
+
+div.login_camp {
+	padding: 20px;
+}
+
+div.login_camp form {
+	color: white;
 }
