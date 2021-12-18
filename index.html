@@ -15,15 +15,22 @@
 						<h1>Sistema de Login</h1>
 					</div>
 					<div class="form_field">
-						<label for="iName" class="">Nome Completo: <span class="required-symbol"></label> <input type="text" name="nName" id="iName" placeholder="Digite aqui...">
+						<label for="iName" class="title_databox">Nome Completo: <span class="required-symbol"></span></label> <input type="text" name="nName" id="iName" placeholder="Nome...">
 
-						<label for="iEmail">E-mail: <span class="required-symbol"></label> <input type="text" name="nEmail" id="iEmail" placeholder="Digite aqui...">
-						<label for="iPassword">Senha: <span class="required-symbol"></label> <input type="text" name="nPassword" id="iPassword" placeholder="Digite aqui...">
+						<label for="iEmail" class="title_databox">E-mail: <span class="required-symbol"></span></label> <input type="text" name="nEmail" id="iEmail" placeholder="email123@hotmail.com...">
+						
+						<label for="iPassword" class="title_databox">Senha: <span class="required-symbol"></span></label> <input type="text" name="nPassword" id="iPassword" placeholder="Senha...">
 
 						<input type="submit" name="nSend" value="Enviar" onclick="clickEvent()">
 					</div>
 				</form>
 			</div>
+
+			<script>
+				function clickEvent() {
+					alert('Formulário enviado com sucesso!')
+				}
+			</script>
 		</div>
 	</body>
 </html>
