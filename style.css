@@ -1,4 +1,4 @@
-* {
+*, *::before, *::after {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -11,58 +11,80 @@
 }
 
 body {
-	margin: 0 auto;
-	width: 50%;
-	display: flex;
+	margin: auto;
 	font: normal 13pt "Helvetica";
+	width: 50%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background-color: var(--secondary-color);
 }
 
-span.required-symbol::before {
+.required-symbol::before {
 	content: "*";
 	color: red;
 }
 
-div.container {
-	margin: 200px auto;
+.container {
 	border-radius: 20px;
-	border: 2px solid cyan;
+	border: 0.185rem solid cyan;
 	background: linear-gradient(0deg, #000018, #000036);
 	background-color: var(--primary-color);
-	box-shadow: 0 0 100px -20px rgba(240, 255, 255, 1);
+	box-shadow: 0 0 4rem -1.1rem rgba(240, 255, 255, 1);
 }
 
-div.login_camp {
+.login_camp {
 	padding: 20px;
 }
 
-div.login_camp form {
+.login_camp form {
 	color: white;
 }
 
-div.form_field {
+.form_field {
 	display: grid;
 	grid-template-rows: auto;
 }
 
-div.form_field label.title_databox {
+.form_field .title_databox {
 	padding: 5px 0;
 }
 
-div.form_field input[type='text'] {
+.form_field input[type='text'] {
 	max-width: 100%;
 	height: 30px;
 	background-color: var(--inputs-color);
-	border-width: 0 0 3px 0;
-	border-color: cyan
+	border-width: 0 0 0.2rem 0;
+	border-color: transparent
 }
 
-div.form_field input[type='text']::-webkit-input-placeholder {
+.form_field input[type='text']:hover {
+	border-color: cyan;
+	transition: 1.5s ease-in;
+}
+
+.form_field input[type='text']::-webkit-input-placeholder {
 	color: rgba(200, 200, 255, 0.39);
+	font: inherit;
+	size: inherit;
 }
 
-div.form_field input[type='submit'] {
-	margin: 10px auto;
+.form_field input[type='submit'] {
+	margin: 5vh auto 0;
 	padding: 10px;
 	width: 50%;
+	cursor: pointer;
+	border-radius: 2rem;
+	border-color: transparent;
+	background-color: rgba(255, 255, 255, 0.05);
+	color: white;
+
+}
+
+.form_field input[type='submit']:hover {
+	padding: 1rem;
+	width: 60%;
+	border-color: cyan;
+	transition: 1s;
 }
