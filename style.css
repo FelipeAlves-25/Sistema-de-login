@@ -64,6 +64,10 @@ body {
 	transition: 1.5s ease-in;
 }
 
+.form_field input[type='text']:focus {
+	border-color: cyan;
+}
+
 .form_field input[type='text']::-webkit-input-placeholder {
 	color: rgba(200, 200, 255, 0.39);
 	font: inherit;
